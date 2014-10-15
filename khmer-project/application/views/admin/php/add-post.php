@@ -16,35 +16,35 @@
                       <h3>Form Posts</h3>
                    </div>
                    <div class="box-body">
-							<form class="form-horizontal" role="form">
+							<form action="../post/add_new_post" class="form-horizontal" role="form" enctype="multipart/form-data" method="post">
 									
 									<!-- Text input -->
 									<div class="form-group">
 										<label for="input-text" class="col-sm-2 control-label">Title</label>
 										<div class="col-sm-10">
-										<input type="text" class="form-control" id="input-text">
+										<input type="text" class="form-control" id="post_title" name="post_title">
 										</div>
 									</div>
 									
 									<div class="form-group">
 										<label for="input-text" class="col-sm-2 control-label">Content</label>
 										<div class="col-sm-10">
-										<textarea id="input-text" class="form-control"></textarea>
+										<textarea id="post_content" name="post_content" class="form-control"></textarea>
 										</div>
 									</div>
 									
 									<div class="form-group">
 										<label class="col-sm-2 control-label">Date</label>
 										<div class="col-sm-3">
-											<input type="text" class="form-control datepicker-input">
+											<input type="text" id="post_created" name="post_created" class="form-control datepicker-input">
 										</div>
 									</div>
 									
-									<!-- Input password -->
+									
 									<div class="form-group">
-										<label for="inputPassword" class="col-sm-2 control-label">Image</label>
+										<label for="" class="col-sm-2 control-label">Image</label>
 										<div class="col-sm-10">
-										<input type="file" class="form-control" id="inputPassword" placeholder="Password">
+										<input type="file" class="form-control" id="post_image" name="post_image">
 										</div>
 									</div>
 									

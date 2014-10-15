@@ -56,17 +56,19 @@ class Admin extends CI_Controller {
 		$category->list_category_by_id();
 		$this->load->view('admin/footer');
 	}
-
 	public function add_new_post(){
 		$this->load->view('admin/header');
 		$this->load->view('admin/php/add-post');
 		$this->load->view('admin/footer');
+		
 	}
+
 	public function view_all_posts(){
 		$this->load->view('admin/header');
 		$this->load->view('admin/php/all-posts');
 		$this->load->view('admin/footer');	
 	}
+
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
