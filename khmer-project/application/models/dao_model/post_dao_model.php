@@ -49,7 +49,9 @@ class Post_dao_model extends CI_Model{
 	}
 
 	public function get_all_posts(){
-		$query = $this->db->get('tbl_posts');
+		$this->db->select('post_id,post_title,post_content,post_created');                
+        $this->db->from('tbl_posts');
+		$query = $this->db->get();
 		$result = $query->result();
 		return $result;
 	}

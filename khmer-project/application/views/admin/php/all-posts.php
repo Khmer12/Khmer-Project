@@ -28,88 +28,36 @@
 							  </tr>
 						  </thead>   
 					      <tbody>
+					      	<?php
+								foreach($result as $row){
+									$post_id = $row->post_id;
+									$post_title = $row->post_title;
+									$post_content = $row->post_content;
+									$post_created = $row->post_created;
+							?>					      	
 						      <tr>
-								   <td>1</td>
-								   <td>John Doe</td>
-								   <td>2014/06/16</td>
-											<td>Member</td>
-											<td>
-												<span class="label label-success">Active</span>
-											</td>
-											<td>
-												<a class="btn btn-success btn-sm" href="table.php#">
-													<i class="fa fa-search-plus "></i>  
-												</a>
-												<a class="btn btn-info btn-sm" href="table.php#">
-													<i class="fa fa-edit "></i>  
-												</a>
-												<a class="btn btn-danger btn-sm" href="table.php#">
-													<i class="fa fa-trash-o "></i> 
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>John Doe</td>
-											<td>2014/06/16</td>
-											<td>Member</td>
-											<td>
-												<span class="label label-success">Active</span>
-											</td>
-											<td>
-												<a class="btn btn-success btn-sm" href="table.php#">
-													<i class="fa fa-search-plus "></i>  
-												</a>
-												<a class="btn btn-info btn-sm" href="table.php#">
-													<i class="fa fa-edit "></i>  
-												</a>
-												<a class="btn btn-danger btn-sm" href="table.php#">
-													<i class="fa fa-trash-o "></i> 
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>John Doe</td>
-											<td>2014/06/16</td>
-											<td>Member</td>
-											<td>
-												<span class="label label-warning">Pending</span>
-											</td>
-											<td>
-												<a class="btn btn-success btn-sm" href="table.php#">
-													<i class="fa fa-search-plus "></i>                                            
-												</a>
-												<a class="btn btn-info btn-sm" href="table.php#">
-													<i class="fa fa-edit "></i>                                            
-												</a>
-												<a class="btn btn-danger btn-sm" href="table.php#">
-													<i class="fa fa-trash-o "></i> 
-
-												</a>
-											</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>John Doe</td>
-											<td>2014/06/16</td>
-											<td>Member</td>
-											<td>
-												<span class="label label-warning">Pending</span>
-											</td>
-											<td>
-												<a class="btn btn-success btn-sm" href="table.php#">
-													<i class="fa fa-search-plus "></i>                                            
-												</a>
-												<a class="btn btn-info btn-sm" href="table.php#">
-													<i class="fa fa-edit "></i>                                            
-												</a>
-												<a class="btn btn-danger btn-sm" href="table.php#">
-													<i class="fa fa-trash-o "></i> 
-
-												</a>
-											</td>
-										</tr>
+								   <td><?=html_escape($post_id)?></td>
+								   <td><?=html_escape($post_title)?></td>
+								   <td style="width:100px;"><?=html_escape($post_content)?></td>
+								   <td><?=html_escape($post_created)?></td>
+								   <td>
+										<span class="label label-success">Active</span>
+									</td>
+									<td>
+										<a class="btn btn-success btn-sm" href="table.php#">
+									  		<i class="fa fa-search-plus "></i>  
+										</a>
+										<a class="btn btn-info btn-sm" href="table.php#">
+											<i class="fa fa-edit "></i>  
+										</a>
+										<a class="btn btn-danger btn-sm" href="table.php#">
+											<i class="fa fa-trash-o "></i> 
+										</a>
+									</td>
+								</tr>
+								<?php
+									}
+								?>
 									  </tbody>
                                 <!-- /.box-body -->
                             <!-- /.box -->

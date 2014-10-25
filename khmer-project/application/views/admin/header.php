@@ -22,10 +22,11 @@
 			<script src="<?=base_url()?>/https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-         <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+         <!--<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>-->
+         <script src="<?=base_url()?>/js/plugins/tinymce/tinymce.min.js"></script>
 			
 			<script type="text/javascript">
-			tinymce.init({
+			/*tinymce.init({
 			    selector: "textarea",
 			    theme: "modern",
 			    plugins: [
@@ -37,11 +38,30 @@
 			    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
 			    toolbar2: "print preview media | forecolor backcolor emoticons",
 			    image_advtab: true,
+
 			    templates: [
 			        {title: 'Test template 1', content: 'Test 1'},
 			        {title: 'Test template 2', content: 'Test 2'}
 			    ]
-			});
+
+                
+			});*/
+            tinymce.init({
+                selector: "textarea",theme: "modern", height:300,
+                plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+                    "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+                    "table contextmenu directionality emoticons paste textcolor responsivefilemanager"
+                ],
+                toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+                toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+                image_advtab: true ,
+
+                
+                external_filemanager_path:"<?=base_url()?>/filemanager/",
+                filemanager_title:"Filemanager" ,
+                external_plugins: { "filemanager" : "<?=base_url()?>/filemanager/plugin.min.js"}
+            });
 			</script>
         
 	</head>
@@ -246,7 +266,7 @@
                                 <i class="fa fa-angle-right pull-right"></i>
                             </a>
                             <ul class="sub-menu">
-                                <li><a href="<?=site_url()?>/admin/view_all_posts">All posts</a></li>
+                                <li><a href="<?=site_url()?>/post/view_all_posts">All posts</a></li>
                                 <li><a href="<?=site_url()?>/admin/add_new_post">Add new post</a></li>
                             </ul>
                         </li>

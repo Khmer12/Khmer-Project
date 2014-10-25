@@ -27,7 +27,7 @@
 
 										<input type="text" class="form-control" name="category_name" id="category_name">
 
-										<input type="text"  class="form-control" id="input-text" readonly="readonly" value="Auto Number">
+<input type="text"  class="form-control" id="input-text" readonly="readonly" value="Auto Number">
 
 										</div> -->
 										

@@ -19,10 +19,6 @@ class Post extends CI_Controller {
 		);
 		$this->load->library('upload',$config);
 
-		/*$this->load->view('admin/header');
-		$this->load->view('admin/php/add-post');
-		$this->load->view('admin/footer');*/
-
   		if(!$this->upload->do_upload('post_image'))
 		{
 			echo $this->upload->display_errors();
@@ -42,11 +38,18 @@ class Post extends CI_Controller {
 			$this->post_dto_model->set_post_view_count(0);
 			$this->post_dao_model->add_new_post($this->post_dto_model);
   		}
+  		$this->view_all_posts();
 	}
 
 	public function view_all_posts(){
 		$this->load->view('admin/header');
-		$this->load->view('admin/php/all-posts');
-		$this->load->view('admin/footer');	
+		$data=array();
+		$data['result']= $this->post_dao_model->get_all_posts();
+		if($data){
+			$this->load->view('admin/php/all-posts',$data);
+		}else {
+			echo " data not found";
+		}
+		$this->load->view('admin/footer');			
 	}
 }

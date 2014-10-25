@@ -46,6 +46,7 @@
 										<div class="col-sm-10">
 										<input type="file" class="form-control" id="post_image" name="post_image">
 										</div>
+										
 									</div>
 									
 									
