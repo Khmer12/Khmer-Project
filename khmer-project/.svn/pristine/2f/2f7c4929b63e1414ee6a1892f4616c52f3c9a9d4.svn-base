@@ -22,9 +22,7 @@ class Authentication extends CI_Controller {
 		$data=array();
 		$data['result']= $this->authentication_dao_model->get_user_account();
 		if($data){
-			
-			$this->load->view('admin/php/all-users',$data);
-
+			$this->load->view('admin/php/all-user',$data);
 		}else {
 			echo " data not found";
 		}
@@ -55,7 +53,6 @@ class Authentication extends CI_Controller {
 		$user->set_user_id($user_id);
 		$data['result']= $this->authentication_dao_model->get_user_account_by_id($user);
 		if($data){
-
 			$this->load->view('admin/php/edit-user',$data);
 		}
 	}
@@ -114,9 +111,7 @@ class Authentication extends CI_Controller {
 		$user->set_user_id($user_id);
 		$data= $this->authentication_dao_model->enable_disable_user_account($user,$status);
 		if ($data==true){
-			$this->load->view("admin/header");
 			$this->list_user();
-			$this->load->view("admin/footer");
 		}
 	}
 }

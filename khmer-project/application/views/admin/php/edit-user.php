@@ -1,3 +1,4 @@
+<div class="rightside">
 <div class="page-head">
                     <h1>Form edit users  <small></small></h1>
                     <ol class="breadcrumb">
@@ -52,4 +53,6 @@
               </div>
 		</div>
 	</div>              
+ </div>
+ </div>
  </div>

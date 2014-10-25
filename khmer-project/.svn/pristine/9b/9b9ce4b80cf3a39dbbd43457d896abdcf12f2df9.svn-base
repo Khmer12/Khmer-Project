@@ -43,7 +43,6 @@ class Category extends CI_Controller {
 		$category_name=$this->input->post('category_name');
 		$category=new Category_dto_model();
 		$category->set_category_name($category_name);
-		echo "GET".$category->get_category_name();
 		$data= $this->category_dao_model->add_new_category($category);
 			if ($data==true){
 				echo "successfully added";
@@ -55,7 +54,7 @@ class Category extends CI_Controller {
 	public function update_category(){
 		$data['title']="update category";
 		$data['header']="update category";
-		$category_id=$this->input->post('category_id');
+		$category_id=$this->input->get('category_id');
 		$category_name=$this->input->post('category_name');
 		$category =new Category_dto_model();
 		$category->set_category_id($category_id);

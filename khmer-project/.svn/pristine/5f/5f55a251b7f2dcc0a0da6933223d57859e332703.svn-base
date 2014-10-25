@@ -34,7 +34,6 @@
 		}
 		
 		public function add_new_category(Category_dto_model $category){
-			echo "CategoryName". $category_name;
 			$data = array(
 					'Category_Name' =>$category->get_category_name()
 			);
