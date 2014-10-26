@@ -52,4 +52,6 @@ class Post extends CI_Controller {
 		}
 		$this->load->view('admin/footer');			
 	}
+	public function test(){
+	
 }
